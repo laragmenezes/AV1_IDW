@@ -1,0 +1,140 @@
+body {
+  border: 5px solid deeppink;
+  padding: 10px;
+  background-color: #fff0f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.container {
+  border: 4px dashed hotpink;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 520px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #d10084;
+  margin-bottom: 16px;
+}
+
+#formTarefa {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#inputTarefa {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d9a0c8;
+  border-radius: 8px;
+  outline: none;
+}
+
+#inputTarefa:focus {
+  border-color: deeppink;
+  box-shadow: 0 0 5px rgba(255, 20, 147, 0.35);
+}
+
+#formTarefa button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: deeppink;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+#formTarefa button:hover {
+  background-color: #c70074;
+  transform: translateY(-1px);
+}
+
+#mensagemErro {
+  color: #b00020;
+  min-height: 22px;
+  margin-bottom: 12px;
+}
+
+#listaTarefas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tarefa-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff7fe;
+  border: 1px solid #f2c6e4;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.tarefa-texto {
+  flex: 1;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+.botoes-tarefa {
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: #ff85c1;
+  color: #510032;
+}
+
+.btn-excluir {
+  background-color: #ff5c8d;
+  color: white;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+@media (max-width: 600px) {
+  .container {
+    border-width: 3px;
+    padding: 16px;
+  }
+
+  #formTarefa {
+    flex-direction: column;
+  }
+
+  #formTarefa button {
+    width: 100%;
+  }
+
+  .tarefa-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .botoes-tarefa {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
